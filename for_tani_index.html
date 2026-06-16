@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Tani ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#fffaf0,#ffd6e7,#ffe8f0);color:#333;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+h1{font-size:3rem}
+.btn{padding:14px 28px;border:none;border-radius:30px;background:#ff5c8a;color:#fff;font-size:18px;cursor:pointer}
+.card{max-width:900px;margin:25px auto;padding:25px;background:rgba(255,255,255,.7);border-radius:20px;backdrop-filter:blur(8px)}
+.hidden{display:none}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:16px}
+.heart{position:fixed;top:-20px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh)}}
+.secret{margin:10px;padding:10px 20px}
+footer{text-align:center;padding:30px}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>💖 Dear Tani 💖</h1>
+<p>The girl who never calls, starts kalesh, gets angry, hides feelings and still became one of my favourite people.</p>
+<button class="btn" onclick="openSite()">Open Surprise 🎁</button>
+</div>
+
+<div id="main" class="hidden">
+<div class="card">
+<h2>🌸 A Letter</h2>
+<p>Happy Birthday (10 April) and thank you for all the night chats, random arguments, funny moments and memories. You encourage yourself when things get tough, and that's one of the things I admire about you.</p>
+<p>And yes... sometimes I think you're the world champion of hiding feelings 😂❤️</p>
+</div>
+
+<div class="card">
+<h2>📸 Memory Corner</h2>
+<div class="gallery">
+<img src="tani1.jpg" alt="Photo 1">
+<img src="tani2.jpg" alt="Photo 2">
+</div>
+<p>Upload your photos as tani1.jpg and tani2.jpg in the same GitHub repository.</p>
+</div>
+
+<div class="card">
+<h2>🎁 Secret Messages</h2>
+<button class="secret" onclick="alert('Tu jitna gussa karti hai utni hi caring bhi hai 😌')">Truth #1</button>
+<button class="secret" onclick="alert('Night chats ke bina maza nahi aata 💬')">Truth #2</button>
+<button class="secret" onclick="alert('Feelings hide karne ki world champion 😂')">Truth #3</button>
+<button class="secret" onclick="alert('Thanks for existing, Tani ❤️')">Final Secret</button>
+</div>
+
+<div class="card">
+<h2>✨ From Rishi Kashyap</h2>
+<p>Some people become important without even trying. Thank you for being one of those people. Stay happy, keep smiling and never stop being yourself. ❤️</p>
+</div>
+<footer>Made with ❤️ by Rishi</footer>
+</div>
+
+<script>
+function openSite(){
+document.getElementById('main').classList.remove('hidden');
+for(let i=0;i<80;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='💖';
+h.style.left=Math.random()*100+'vw';
+h.style.animationDuration=(Math.random()*5+3)+'s';
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),8000);
+}
+}
+</script>
+</body>
+</html>
